@@ -18,7 +18,7 @@ app.use(cors())
 
 
 app.get('/', function(req, res) {
-   return "App"
+   res.send("Application")
 });
 
 
