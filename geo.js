@@ -38,7 +38,7 @@ const getPropertieslength = (Id, Level) => {
     return Properties.length
 }
 
-route.get('/State', (req, res) => { 
+route.get('/state', (req, res) => { 
     let apiData = { 
         GeoJsons: {  
             OuterBoundary: JSON.parse(fs.readFileSync('./Data/state.json', 'utf8'))} 
@@ -46,7 +46,7 @@ route.get('/State', (req, res) => {
          res.json(apiData)
          // res.status(403).json({'me':"err"})
 })
-route.get('/Districts', (req, res) => {
+route.get('/districts', (req, res) => {
     BoundaryFile = JSON.parse(fs.readFileSync('./Data/state.json', 'utf8'))
     let Geographys = getData('./Data/district.json', 'District')
     let Boundary = getBoundary('./Data/state.json', 2900000000)
@@ -61,7 +61,7 @@ route.get('/Districts', (req, res) => {
     }
     res.json(apiData)
 })
-route.get('/Mandals', (req, res) => {
+route.get('/mandals', (req, res) => {
     let { DistrictID } = req.query
     let Geographys = getData(`./Data/Mandals/${DistrictID}.json`, 'Mandal')
     let PropertiesLen = getPropertieslength(DistrictID, 'District')
@@ -87,7 +87,7 @@ route.get('/Mandals', (req, res) => {
     res.json(apiData)
 })
 
-route.get('/Villages', (req, res) => {
+route.get('/villages', (req, res) => {
     let { DistrictID, MandalID } = req.query
     let Geographys = getData(`./Data/Village/${DistrictID}/${MandalID}.json`, 'Village')
     let PropertiesLen = getPropertieslength(MandalID, 'Mandal')
@@ -112,7 +112,7 @@ route.get('/Villages', (req, res) => {
     }
     res.json(apiData)
 })
-route.get('/Villages/Village', (req, res) => {
+route.get('/villages/village', (req, res) => {
     let { DistrictID, MandalID, VillageID } = req.query
     // let Properties = PropertiesData.filter(prop => { return prop.GEOGRAPHY_ID.Village_ID == VillageID })
     let Geography = []
