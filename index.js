@@ -3,7 +3,7 @@ const cors = require('cors')
 const app = express()
 let os = require('os');
 const path = require('path');
-let network = interface = os.networkInterfaces()
+//let network = interface = os.networkInterfaces()
  
  
 // let ip = network['Wi-Fi'][1]['address']
@@ -25,8 +25,8 @@ app.get('/', function(req, res) {
 
 
 
-app.use("/Geo",   require('./geo'))
-app.use("/Properties",   require('./Properties'))
+//app.use("/Geo",   require('./geo'))
+//app.use("/Properties",   require('./Properties'))
  
 
 
