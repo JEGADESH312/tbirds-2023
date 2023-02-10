@@ -32,7 +32,7 @@ app.get('/', function(req, res) {
 
 
 app.listen(port,   () => {
-    console.log(`Listening @ ${ip}  at port number ${port} `);
+    console.log(`Listening @   at port number ${port} `);
 })
 
 
