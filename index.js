@@ -10,7 +10,7 @@ const path = require('path');
  
 let port = 5000
 
-app.use(express.static(path.join(__dirname, '/client')))
+//app.use(express.static(path.join(__dirname, '/client')))
 
 
 app.use(express.json())
@@ -18,7 +18,7 @@ app.use(cors())
 
 
 app.get('/', function(req, res) {
-    res.render('index.html');
+   return "App"
 });
 
 
