@@ -2,7 +2,7 @@ const express = require('express')
 const route = express.Router()
 const fs = require("fs")
 
-const PropertiesData = JSON.parse(fs.readFileSync('./Data/properties.json', 'utf8'))
+const PropertiesData = JSON.parse(fs.readFileSync('./Data/Properties.json', 'utf8'))
 
 const getData = (url, levelBoundary) => {
     let geodata = JSON.parse(fs.readFileSync(url, 'utf-8'))
