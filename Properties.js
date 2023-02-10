@@ -2,7 +2,8 @@ const express = require('express')
 const route = express.Router()
 const fs = require("fs")
 
-const PropertiesData = JSON.parse(fs.readFileSync('./Data/properties.json', 'utf8'))
+const file = path.join(process.cwd(), 'Data', 'properties.json');
+const PropertiesData = fs.readFileSync(file, 'utf8');
 
 route.get('/', (req, res) => {
     res.json(PropertiesData)
