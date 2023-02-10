@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
 
 
 
-//app.use("/Geo",   require('./geo'))
+app.use("/Geo",   require('./geo'))
 //app.use("/Properties",   require('./Properties'))
  
 
